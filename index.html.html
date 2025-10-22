@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎉 Happy Birthday Deepika Dadar 🎂</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: linear-gradient(135deg, #ffccf9, #b3ffff, #ffe6cc, #d9ccff);
+      background-size: 400% 400%;
+      animation: gradientShift 10s ease infinite;
+      overflow: hidden;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      font-size: 3.5em;
+      color: #fff;
+      text-shadow: 0 0 10px #ff00de, 0 0 20px #ff00de, 0 0 30px #ff0080;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ff00de, 0 0 20px #ff00de, 0 0 30px #ff0080; }
+      to { text-shadow: 0 0 20px #00fff0, 0 0 40px #00fff0, 0 0 60px #00fff0; }
+    }
+
+    h2 {
+      font-size: 2em;
+      color: #fff;
+      text-shadow: 0 0 15px #00ffcc, 0 0 25px #00b3ff;
+    }
+
+    .balloon {
+      position: absolute;
+      bottom: -100px;
+      width: 60px;
+      height: 80px;
+      border-radius: 50%;
+      background-color: pink;
+      animation: floatUp 6s ease-in infinite;
+      opacity: 0.8;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
+    }
+
+    .confetti {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: gold;
+      top: 0;
+      animation: fall 3s linear infinite;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(100vh); }
+    }
+
+    .stars {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: white;
+      animation: twinkle 2s infinite;
+      border-radius: 50%;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <h1>🎂 Happy Birthday 🎉</h1>
+  <h2>Deepika Dadar 💖</h2>
+  <h3 style="color:white;">Wishing you endless joy, love, and laughter today! ✨</h3>
+
+  <script>
+    // 🎈 Balloons
+    for (let i = 0; i < 15; i++) {
+      let b = document.createElement("div");
+      b.classList.add("balloon");
+      b.style.left = Math.random() * 100 + "vw";
+      b.style.backgroundColor = `hsl(${Math.random() * 360}, 80%, 70%)`;
+      b.style.animationDuration = (4 + Math.random() * 4) + "s";
+      document.body.appendChild(b);
+    }
+
+    // 🎊 Confetti
+    for (let i = 0; i < 80; i++) {
+      let c = document.createElement("div");
+      c.classList.add("confetti");
+      c.style.left = Math.random() * 100 + "vw";
+      c.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 60%)`;
+      c.style.animationDuration = (2 + Math.random() * 3) + "s";
+      c.style.animationDelay = Math.random() * 2 + "s";
+      document.body.appendChild(c);
+    }
+
+    // 🌟 Stars
+    for (let i = 0; i < 50; i++) {
+      let s = document.createElement("div");
+      s.classList.add("stars");
+      s.style.left = Math.random() * 100 + "vw";
+      s.style.top = Math.random() * 100 + "vh";
+      s.style.animationDuration = (1 + Math.random() * 2) + "s";
+      document.body.appendChild(s);
+    }
+  </script>
+</body>
+</html>
